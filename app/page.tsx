@@ -1,11 +1,13 @@
 'use client';
 
 import { useSession, signIn, signOut } from "next-auth/react";
+import { CSSProperties } from 'react';
+
 
 export default function HomePage() {
   const { data: session } = useSession();
 
-  const containerStyle = {
+  const containerStyle: CSSProperties = {
     maxWidth: "400px",
     margin: "100px auto",
     padding: "2rem",
@@ -15,7 +17,7 @@ export default function HomePage() {
     fontFamily: "sans-serif",
     boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
   };
-
+  
   const buttonStyle = {
     backgroundColor: "#000",
     color: "#fff",
